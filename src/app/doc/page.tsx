@@ -1,5 +1,6 @@
 import styles from "../page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Doctor() {
     return (
@@ -8,6 +9,13 @@ export default function Doctor() {
                 <p>
                     This is the part where I talk about almost being sent to the insane asylum... 
                 </p>
+                <Image
+                    src="/leaf.png"
+                    alt="Leaf logo"
+                    width={100}
+                    height={100}
+                    priority
+                    />
             </div>
             <div className={styles.grid}>
         <Link 
