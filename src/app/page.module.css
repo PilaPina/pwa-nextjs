@@ -11,18 +11,19 @@
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  padding: 1rem;
 }
 
 .description p {
@@ -34,10 +35,10 @@
   border-radius: var(--border-radius);
 }
 
-.code {
-  font-weight: 700;
+/* .code {
+  font-weight: 1000;
   font-family: var(--font-mono);
-}
+} */
 
 .grid {
   display: grid;

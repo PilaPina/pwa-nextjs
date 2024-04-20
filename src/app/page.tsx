@@ -7,8 +7,13 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          This is my progressive web application. You can install it in the browser. And you can use it offline. 
-          <code className={styles.code}></code>
+          This is my progressive web application. Usually referred to as a PWA. <br/> 
+          They are not a website, not a desktop application and not an app. They are something in between. They can behave like an app, or a website, whichever you prefer.<br/> 
+          You can install them in your browser and then they look like an app. <br/>
+          PWA&apos;s improve user engagement. They are cost-effective in development. Are SEO optimized. 
+          Responsive and fast, even on slow networks. And even offline. Yup. I said it. Offline. <br/> 
+          And they are fully cross-platform, from any device, any browser and you do not need an app store!<br/>
+        
         </p>
         <div>
           <a
@@ -18,11 +23,10 @@ export default function Home() {
           >
             By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
+              src="/leaf.png"
+              alt="Leaf logo"
+              width={50}
+              height={50}
               priority
             />
           </a>
@@ -33,9 +37,9 @@ export default function Home() {
         <Image
           className={styles.logo}
           src="/512x512.svg"
-          alt="Next.js Logo"
-          width={250}
-          height={250}
+          alt="Image of the fossils from animal crossing game"
+          width={150}
+          height={150}
           priority
         />
       </div>
