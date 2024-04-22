@@ -1,5 +1,7 @@
 
-
+// Commented out bc I kept getting errors when following instr from api. 
+// This was before I started using Axios like for the weather api. 
+// a
 
 //  const newsapi = process.env.NEWSAPI_KEY;
 

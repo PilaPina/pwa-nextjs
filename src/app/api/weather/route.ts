@@ -27,7 +27,7 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 };
 
 
-
+// below are things I've been trying out but have given me errors as well 
 
 // import { NextApiRequest, NextApiResponse } from 'next';
 // import axios from 'axios';
