@@ -187,7 +187,8 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
-    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);  /*added this to  make it work on Safari*/
+    backdrop-filter: blur(24px);  /*I'll have to figure out a workaround to make it work on Firefox. Backdrop filter not suppored on it as is*/
   }
 
   .description div {
