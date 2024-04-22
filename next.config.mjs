@@ -9,6 +9,22 @@ const isProd = process.env.NODE_ENV === 'production'   //this disables pwa suppo
 const withPWA2 = withPWA({
   dest: "public",
   disable: !isProd,  // This disables the service worker in development mode
+  runtimeCaching: [
+    {
+      urlPattern:  /^https:\/\/newsapi\.org\//,
+      handler:     `NetworkFirst`,
+      options: {
+        cacheName: 'news-api-cache',
+        expiration:{
+          maxEntries:  200,
+          maxAgeSeconds: 24 * 60 * 60,  //this means 24 hours
+        },
+        cacheableResponse: {
+          statuses: [0, 200]
+        }
+      }
+    }
+  ]
 });
 
 export default withPWA2({
