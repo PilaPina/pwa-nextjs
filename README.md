@@ -1,28 +1,60 @@
 ABOUT THIS PROJECT:
-This is my progressive web application. Usually referred to as a PWA.
+This is my first try at creating a progressive web application. Usually referred to as a PWA.
+
 They are not a website, not a desktop application and not an app. They are something in between. They can behave like an app, or a website, whichever you prefer.
-PWAs are made with web technologies but give users an experience that feels like using a native app on systems like iOS or Android. You use the same code base for all devices. Fully cross-platform and no app store needed. 
 
-PWA Benefits: 
+PWAs are built with web technologies but give users an experience that feels like using a native app on systems like iOS or Android. You use the same code base for all devices. Fully cross-platform and no app store needed. 
+
 They bring together the best of both worlds - the wide accessibility of traditional websites and the perks of platform-specific apps, such as being able to work offline.
-PWA's improve user engagement. They are cost-effective in development. 
-Are SEO optimized. Responsive and fast, even on slow networks.
+PWA's improve user engagement. They are responsive and fast, even on slow networks.
 
-Core Features: For a PWA to work properly, it needs a web app manifest so users can install it through their browser, and a service worker for functions like offline access and running in the background, sending push notifications. 
+Cross-Platform Compatibility:
+PWAs run on multiple operating systems from a single codebase.
+No need for separate development for iOS, Android, etc.
+
+Direct Web Access:
+Users access PWAs directly from the web—no app store downloads.
+Simplified distribution via URLs.
+
+Native-Like Experience:
+PWAs adapt to users’ devices, feeling native.
+Add PWAs to home screens like regular apps.
+
+Advanced Capabilities:
+Offline functionality and push notifications.
+Access to hardware features.
+
+Search Engine Indexing and Sharing:
+Indexed by search engines for organic discovery.
+Easy sharing via URLs.
+
+Cost-Effective Development:
+Single codebase serves all devices.
+
+---
+A PWA needs to have:
+Web App Manifest. (public/manifest.json)
+This is a simple JSON file that tells the browser about your web application and how it should behave when installed on the user’s mobile device or desktop.
+Service workers. (sw.js, workbox*.js)
+Service workers are scripts that your browser runs in the background, separate from a web page, opening the door to features that don’t need a web page or user interaction. They are responsible for features like offline support, background syncs, and push notifications.
+HTTPS
+PWAs must be served over a secure network. All network requests must be made using HTTPS.
+Responsive Design. 
+PWAs should fit any form factor, desktop, mobile, tablet, or whatever is next.
+Cross-Browser Compatibility.
+PWAs should work with any browser of choice. 
+
+For a PWA to work properly, it needs a web app manifest so users can install it through their browser, and a service worker for functions like offline access and running in the background or sending push notifications. 
 Service workers can be tailored to fit what your PWA needs. 
 
 
 Tech Stack:
-Next.js 14, Typescript and Yarn.  
-Next-pwa plugin that helps with creating a PWA. It comes with service workers that allow you to pre-cache Javascript and CSS files out of the box. 
+Next.js 14, Typescript and Yarn for package manager.  
+Next-PWA library. It comes with service workers that allow you to pre-cache Javascript and CSS files out of the box. 
+Weather API 
+News API 
 
-
-
-
-MANIFEST FILE (public/manifest.json):
-A manifest file provides metadata and config details for the PWA. Browsers use this file to identify and install the PWA, allowing it to behave more like a native app on a user's device.
-
-
+There is no emphasis on Design in this project. I'm mostly using the next.js template and just tweaking it so it fits better for what I need.
 
 
 

@@ -13,7 +13,6 @@ export default function Doctor() {
                     <br/>
                     The PWA part was the easy part. 
                     <br/>
-                    And now I&apos;m having issues with my API&apos;s which I don&apos;t get. 
                 </p>
                 <Image
                     src="/leaf.png"
