@@ -56,7 +56,6 @@ export default function Home() {
       <div className={styles.grid}>
         <Link href="/doc"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -70,7 +69,6 @@ export default function Home() {
         <a
           // href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -84,7 +82,6 @@ export default function Home() {
         <Link
           href="/weather"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -96,7 +93,6 @@ export default function Home() {
         <Link
           href="/not-found"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>

@@ -27,7 +27,6 @@ export default function Doctor() {
         <Link 
           href="/"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -39,7 +38,6 @@ export default function Doctor() {
         <a
           // href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -53,7 +51,6 @@ export default function Doctor() {
         <Link
           href="/weather"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
@@ -65,7 +62,6 @@ export default function Doctor() {
         <Link
           href="/not-found"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
