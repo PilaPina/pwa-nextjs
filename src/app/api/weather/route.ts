@@ -1,20 +1,22 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+
 import axios from 'axios';
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: Request) {
      try {
          const apiKey = process.env.SECRET_WEATHER_KEY;
-         const city = req.query.city;
-
-         console.log('apiKey:', apiKey);
+         const searchParams = new URL(req.url).searchParams;
+         const city = searchParams.get('city');
+         
          console.log('city:', city);
 
          const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
 
-         console.log('Axios response:', response);
+         console.log('Axios response:', response.data);
 
-            
-        res.status(200).json(response.data);
+         return (
+            Response.json(response.data)
+         )   
+        
 
         if (response.status !== 200) {
          throw new Error('Failed to fetch weather data');
@@ -22,7 +24,7 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 
      } catch (error) {
          console.error('Error fetching data:', error);
-         res.status(500).json({ error: 'Internal server error' });
+         Response.json({ error: 'Internal server error' });
      }
 };
 
@@ -37,6 +39,8 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 //     bodyParser: true,
 //   },
 // };
+
+
 
 // export const GET = async (req: NextApiRequest, res: NextApiResponse) => {
 //     try {

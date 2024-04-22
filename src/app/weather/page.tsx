@@ -41,9 +41,9 @@ export default function Weather() {
 
     const fetchWeather = async () => {
         try {
-          console.log('fetching weather data for city', 'Reykjavik')
+          // console.log('fetching weather data for city', 'Reykjavik')
           const response = await fetch('/api/weather?city=Reykjavik'); 
-          console.log('Response status:', response.status);
+          // console.log('Response status:', response.status);
 
           if (!response.ok) {
             throw new Error (`HTTP error! status: ${response.status}`);
