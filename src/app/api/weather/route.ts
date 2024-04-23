@@ -1,15 +1,15 @@
 
 import axios from 'axios';
+//import { NextRequest as req } from 'next/server';
 
 export async function GET(req: Request) {
      try {
          const apiKey = process.env.SECRET_WEATHER_KEY;
-         const searchParams = new URL(req.url).searchParams;
-         const city = searchParams.get('city');
+         //const searchParams = new URL(req.url).searchParams;
+         //const city = searchParams.get('city');
 
-         console.log('city:', city);
 
-         const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+         const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Reykjavik&aqi=yes`);
 
          console.log('Axios response:', response.data);
 
@@ -24,6 +24,7 @@ export async function GET(req: Request) {
 
      } catch (error) {
          console.error('Error fetching data:', error);
-         Response.json({ error: 'Internal server error' });
+
+         return Response.json({ error: 'Internal server error' });
      }
 };

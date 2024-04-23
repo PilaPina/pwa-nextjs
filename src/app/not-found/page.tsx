@@ -1,4 +1,4 @@
-import styles from "./page.module.css"
+import styles from "../page.module.css"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -9,7 +9,7 @@ const NotFound: React.FC = () => {
                 <div>
                     <h1>oh no!</h1>
                     <Image
-                    src="/leaf.png"
+                    src="/Leaf.png"
                     alt="Leaf logo"
                     width={100}
                     height={100}
@@ -35,7 +35,6 @@ const NotFound: React.FC = () => {
                 <Link 
                 href="/"
                 className={styles.card}
-                target="_blank"
                 rel="noopener noreferrer"
                 >
                 <h2>

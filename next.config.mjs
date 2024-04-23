@@ -7,12 +7,12 @@ import withPWA from 'next-pwa'
 const isProd = process.env.NODE_ENV === 'production'   //this disables pwa support while in dev mode = see reason below
  
 const withPWA2 = withPWA({
-  dest: "public",  // destination of the service worker 
+  dest: "public",  // destination of service workers
   disable: !isProd,  // This disables the service worker in development mode
   runtimeCaching: [
     {
       urlPattern:  /^https:\/\/newsapi\.org\//,   // BaseUrl for my News API
-      handler:     `NetworkFirst`,   // means that service worker will always try to fetch the latest data, but fallback onto cache if offlien
+      handler:     `NetworkFirst`,   // means that service worker will always try to fetch the latest data, but fallback onto cache if offline
       options: {
         cacheName: 'news-api-cache',
         expiration:{

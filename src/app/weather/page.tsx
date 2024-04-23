@@ -46,7 +46,10 @@ export default function Weather() {
 
     const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
-    const fetchWeather = async () => {
+
+
+    useEffect(() => {
+      const fetchWeather = async () => {
         try {
           // console.log('fetching weather data for city', 'Reykjavik')
           const response = await fetch('/api/weather?city=Reykjavik'); 
@@ -69,9 +72,8 @@ export default function Weather() {
         }
     };
 
-    useEffect(() => {
-      fetchWeather();     
-    }, []); // Empty dependency array ensures this runs once on mount
+    fetchWeather();     
+  }, []); // Empty dependency array ensures this runs once on mount
 
 
   return (
@@ -98,7 +100,6 @@ export default function Weather() {
         <Link 
           href="/"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
           >
           <h2>

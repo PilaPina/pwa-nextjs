@@ -7,7 +7,7 @@ const NotFound: React.FC = () => {
         <div className={styles.main}> 
            <div>
                 <Image
-                src="/leaf.png"
+                src="/Leaf.png"
                 alt="Leaf logo"
                 width={100}
                 height={100}

@@ -15,7 +15,7 @@ export default function Doctor() {
                     <br/>
                 </p>
                 <Image
-                    src="/leaf.png"
+                    src="/Leaf.png"
                     alt="Leaf logo"
                     width={100}
                     height={100}
@@ -59,7 +59,7 @@ export default function Doctor() {
         </Link>
 
         <Link
-          href="/not-found"
+          href="not-found"
           className={styles.card}
           rel="noopener noreferrer"
         >
