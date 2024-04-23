@@ -1,27 +1,26 @@
-
-// Commented out bc I kept getting errors when following instr from api. 
-// This was before I started using Axios like for the weather api. 
-// a
-
-//  const newsapi = process.env.NEWSAPI_KEY;
+import axios from "axios";
 
 
-//  export const fetchNews = async () => {
-//      try {
-//         //Fetch from sources
-//        const sourcesResponse = await newsapi.v2.sources({
-//          q: 'pwa',
-//          category: 'technology',
-//          language: 'en',
-//          country: 'us',
-//        });
-  
-//        // You can process the response as needed
-//        const sources = sourcesResponse.sources;
-  
-//        return sources;
-//      } catch (error) {
-//        console.error('Error fetching news data:', error);
-//        throw new Error('Internal server error');
-//      }
-//    };
+
+export async function GET(req: Request) {
+    try {
+    //     const newsKey = process.env.NEWSAPI_KEY;
+
+    //    const sourcesResponse = await newsapi.v2.everything({
+    //      q: 'pwa',
+    //     category: 'technology',
+    //      language: 'en',
+    //      country: 'us',
+    //     });
+
+    //     const response = await axios.get(`https://newsapi.org/v2/everything?q=keyword&apiKey=${newsKey}`);
+        
+    //     return (
+    //         Response.json(response.data)
+    //     )
+
+     } catch (error) {
+       console.error('Error fetching news data:', error);
+        throw new Error('Internal server error');
+     }
+    };

@@ -29,7 +29,7 @@ export default function Doctor() {
           rel="noopener noreferrer"
         >
           <h2>
-            Go home!<span>-&gt;</span>
+            go back<span>-&gt;</span>
           </h2>
           <p>This link will take you back to the landing page.</p>
         </Link>

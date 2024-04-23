@@ -1,6 +1,8 @@
 'use client'
 import { useState, useEffect } from "react";
 import styles from "../page.module.css";
+import Link from "next/link";
+//import Image from "next/image";
 
 type Location = {
     name: string;
@@ -26,7 +28,12 @@ type Location = {
     temp_f: number;
     is_day: number;
     condition: Condition;
-    // Other properties related to current weather
+    wind_kph: number;
+    wind_dir: string;
+    pressure_mb:  number;
+    humidity:  number;
+    feelslike_c: number;
+    // Other data available in weather api
   };
   
   type WeatherData = {
@@ -69,16 +76,37 @@ export default function Weather() {
 
   return (
     <main className={styles.main}>
-      <h1>Weather</h1>
-      {/* <button onClick={fetchWeather}>FETCH WEATHER</button> */}
+      <div>
+        <h1>Current weather</h1>
+      </div>    
       {weatherData && (
-        <div>
+        <div className={styles.weather}>
           <p>City: {weatherData.location.name}</p>
           <p>Temperature: {weatherData.current.temp_c}°C</p>
           <p>Condition: {weatherData.current.condition.text}</p>
+          {/* <Image src={`https:${weatherData.current.condition.icon}`} alt="Weather Icon" /> */}
+          <p>Wind Speed: {weatherData.current.wind_kph} kph</p>
+          <p>Wind Direction: {weatherData.current.wind_dir}</p>
+          <p>Pressure: {weatherData.current.pressure_mb} mb</p>
+          <p>Humidity: {weatherData.current.humidity}%</p>
+          <p>Feels Like: {weatherData.current.feelslike_c}°C</p>
           {/* Add other relevant weather data */}
         </div>
       )}
+      {/* <div className={styles.button} onClick={fetchWeather}>Refresh weather</div> */}
+      <div className={styles.grid}>
+        <Link 
+          href="/"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          <h2>
+              go back <span>-&gt;</span>
+          </h2>
+          <p>Click here to go back to landing page</p>
+        </Link>
+      </div>      
     </main>
   );
 }

@@ -74,8 +74,10 @@ export default function Home() {
           <h2>
             Headscratcher <span>-&gt;</span>
           </h2>
-          <p>There doesn&apos;t seem to be one good resource for reading up about PWA&apos;s. It&apos;s all very scattered.
-            And not up to date yet for Next.js 14, or maybe it&apos;s just me? 
+          <p>It took me some time to find an up to date resource about PWA&apos;s. 
+            But that&apos;s mainly because Next.js just updated to version 14 and docs have caught up yet.
+            Plus Apple was until february being annoying about wanting to support service workers in iOs. 
+            But it&apos;s all good now!
           </p>
         </a>
 
@@ -87,7 +89,7 @@ export default function Home() {
           <h2>
             The Weather<span>-&gt;</span>
           </h2>
-          <p>Here is my weather API. I&apos;m currently getting confusing errors on it... </p>
+          <p>Here is my weather API.</p>
         </Link>
 
         <Link
@@ -99,7 +101,7 @@ export default function Home() {
             News! <span>-&gt;</span>
           </h2>
           <p>
-            This is my News API - but it&apos;s not connected yet. 
+            This WILL be my News API - but it&apos;s not connected yet. 
           </p>
         </Link>
       </div>

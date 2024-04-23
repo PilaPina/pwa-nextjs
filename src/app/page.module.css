@@ -106,9 +106,33 @@
   transform: translateZ(0);
 }
 
+.weather {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
 .logo {
   position: relative;
 }
+/* 
+.button {
+  padding: '1rem 1.2rem';
+  background: transparent;
+  text-decoration: none;
+  border-style: '1px solid';
+  border-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 1rem;
+  border: none;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  transform: translateX(4px);
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+} */
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -227,3 +251,4 @@
     transform: rotate(0deg);
   }
 }
+
