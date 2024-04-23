@@ -20,6 +20,5 @@ export async function GET(req: Request) {
      } catch (error) {
        console.error('Error fetching news data:', error);
         // throw new Error('Internal server error');
-        return new Response('Internal server error', { status: 500 });
      }
     };

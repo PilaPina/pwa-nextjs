@@ -12,7 +12,6 @@
 
   export default function News() {
       const [news, setNews] = useState<Article[] | null>(null);
-      const [error, setError] = useState<string | null>(null);
   
       useEffect(() => {
         const fetchData = async () => {
@@ -21,7 +20,6 @@
             setNews(data);
           } catch (error) {
             console.error('Error fetching news data:', error);
-            setError('Error fetching new data');
           }
         };
         fetchData();
